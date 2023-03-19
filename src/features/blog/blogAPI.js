@@ -1,0 +1,11 @@
+import axios from "../../utils/axios";
+
+export const getBlog = async (id) => {
+  const response = await axios.get(`/blogs/${id}`);
+  return response.data;
+};
+
+export const updateBlog = async (id, data) => {
+  const response = await axios.put(`/blogs/${id}`, data);
+  return response.data;
+};
